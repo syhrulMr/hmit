@@ -1,0 +1,103 @@
+
+.slides-container {
+  width: 80vw;
+  height: 70vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  transition: transform 300ms ease-out;
+}
+.slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  border: 2px solid white;
+}
+
+.btn {
+  background: none;
+  border: none;
+  font-size: 3.5vw;
+  cursor: pointer;
+  transform: translateY(-50%);
+  position: absolute;
+}
+.btn span {
+  color: hsl(281, 100%, 35%);
+}
+.btn span:hover {
+  color: hsl(281, 100%, 40%);
+}
+.btn.previous {
+  top: 50%;
+  left: 0;
+}
+.btn.next {
+  top: 50%;
+  right: 0;
+}
+
+
+.slides {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.co {
+  height: 100vh;
+  /* background-color: #090909; */
+  display: grid;
+  place-items: center;
+}
+
+
+
+/* pengkaderan image *//* Styles for the gallery section */
+/* Styles for the gallery section */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+@media (min-width: 768px) {
+  .gallery {
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+
+  .gallery-item {
+      width: calc(50% - 7.5px);
+      height: calc(50vh - 22.5px);
+  }
+}
